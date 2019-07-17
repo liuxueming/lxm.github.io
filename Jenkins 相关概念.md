@@ -9,4 +9,6 @@
 	*  Build periodically：周期性的构建，**不管源码有没有变化，都会构建**。
 	*  Poll SCM:周期性构建，**源码发生变化才构建**。
 	*  GitHub hook trigger for GITScm polling：这是GitHub的一个插件。可以通过配置GitHub相关功能，配合这个插件实现，向GitHub提交代码时触发Jenkins自动构建的功能。详细的可以参考：<https://blog.csdn.net/boling_cavalry/article/details/78943061>
-		* 注意：Hook URL的配置方式，请参考：<https://blog.csdn.net/qq_21768483/article/details/80177920>	  	
+		* 注意1：Hook URL的配置方式，请参考：<https://blog.csdn.net/qq_21768483/article/details/80177920>	  	
+		* 注意2：localhost无法直接配置，需要内网转发外网，可以借助ngrok。参考链接：</br><https://stackoverflow.com/questions/42037370/jenkinsgithub-we-couldn-t-deliver-this-payload-couldnt-connect-to-server></br>原理：<https://blog.csdn.net/sunansheng/article/details/48372149>
+		* 注意3：GitHub Webhooks Secret 和 Jenkins Secret  要配置一样（都是通过 GitHub Developer settings生成的）。
