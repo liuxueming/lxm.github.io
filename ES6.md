@@ -76,5 +76,34 @@ for (let [,value] of map) {
 }</pre>
 	7. 输入模块的指定方法(加载模块时，往往需要指定输入哪些方法。解构赋值使得输入语句非常清晰)<pre>const { SourceMapConsumer, SourceNode } = require("source-map");
 </pre>
-### 字符串的扩展
 
+### 数值的扩展
+* **Math**
+	* Math.trunc()
+		* :方法用于去除一个数的小数部分，返回整数部分<pre>Math.trunc(4.1) // 4
+Math.trunc(4.9) // 4
+Math.trunc(-4.1) // -4
+Math.trunc(-4.9) // -4
+Math.trunc(-0.1234) // -0
+</pre>
+	 * 对于非数值，Math.trunc内部使用Number方法将其先转为数值。<pre> Math.trunc('123.456') // 123
+Math.trunc(true) //1
+Math.trunc(false) // 0
+Math.trunc(null) // 0
+</pre>
+	 * 对于空值和无法截取整数的值，返回NaN。<pre>Math.trunc(NaN);      // NaN
+Math.trunc('foo');    // NaN
+Math.trunc();         // NaN
+Math.trunc(undefined) // NaN</pre>
+	* Math.sign()
+		* 参数为正数，返回+1；
+		* 参数为负数，返回-1；
+		* 参数为 0，返回0；
+		* 参数为-0，返回-0;
+		* 其他值，返回NaN。 
+
+
+
+
+
+			   
