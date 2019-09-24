@@ -73,10 +73,8 @@ unsubscribe();</pre>
 ### 中间件
 概念：**中间件就是一个函数，对store.dispatch方法进行了改造，在发出 Action 和执行 Reducer 这两步之间，添加了其他功能**
 
-
-
 参考链接：
 </br>[图解Redux数据流](https://alisec-ued.github.io/2016/11/23/%E5%9B%BE%E8%A7%A3Redux%E6%95%B0%E6%8D%AE%E6%B5%81(%E4%B8%80)/)</br>[Redux 入门教程（一）：基本用法
 ](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)</br>[Redux 入门教程（二）：中间件与异步操作
-](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html)</br>[redux office](https://redux.js.org/basics/basic-tutorial)
+](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html)</br>[redux官网](https://redux.js.org/basics/basic-tutorial)
 
