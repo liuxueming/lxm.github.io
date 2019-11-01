@@ -1,16 +1,19 @@
 ### Swiftlint用法
 #### 安装
 * 全局安装
-	1. 通过brew安装 <pre>brew install swiftlint
-</pre>
-	* 在xcode的Build Phases增加 **New Run script Phase** 代码如下： <pre>if which swiftlint >/dev/null; then
+	1. 通过brew安装  
+	<pre>brew install swiftlint</pre>
+	2. 在xcode的Build Phases增加 **New Run script Phase** 代码如下：  
+<pre>if which swiftlint >/dev/null; then
   swiftlint
 else
   echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
 fi</pre>
 * 局部安装 
-	1. 通过CocoaPods安装 ,在Podfile文件增加 <pre>pod 'SwiftLint'
-	2. 在xcode的Build Phases增加 **New Run script Phase** 代码如下(⚠️与上面代码不同) <pr>"${PODS_ROOT}/SwiftLint/swiftlint"
+	1. 通过CocoaPods安装 ,在Podfile文件增加 
+	<pre>pod 'SwiftLint'</pre>
+	2. 在xcode的Build Phases增加 **New Run script Phase** 代码如下(⚠️与上面代码不同) 
+	<pre>"${PODS_ROOT}/SwiftLint/swiftlint"</pre>
 
 #### 使用
 * 安装完成后，重新编译就会弹出相关的提示。
