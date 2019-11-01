@@ -16,7 +16,7 @@
 * 一个组件需要改变全局状态
 * 一个组件需要改变另一个组件的状态
 
-###基本概念和API
+### 基本概念和API
 1. **Store**</br>保存数据的地方，整个应用只能有一个Store。<pre>import { createStore } from 'redux';
 const store = createStore(fn);</pre>
 2. **State**</br>Store对象包含所有数据。**如果想得到某个时点的数据，就要对 Store 生成快照。这种时点的数据集合，就叫做 State。**<pre>import { createStore } from 'redux';
@@ -67,7 +67,7 @@ store.subscribe(listener);
 unsubscribe();</pre>
 ![流程图](https://img.alicdn.com/tps/TB1kYfaNVXXXXcLaXXXXXXXXXXX-604-352.png)
 
-###Reducer 的拆分
+### Reducer 的拆分
 不同的函数负责处理不同属性，最终把它们合并成一个大的 Reducer 即可。Redux 提供了一个`combineReducers`方法，用于 Reducer 的拆分。你只要定义各个子 Reducer 函数，然后用这个方法，将它们合成一个大的 Reducer。总之，`combineReducers()`做的就是产生一个整体的 Reducer 函数。**该函数根据 State 的 key 去执行相应的子 Reducer**，并将返回结果合并成一个大的 State 对象。
 
 ### 中间件
